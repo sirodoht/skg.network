@@ -2,7 +2,7 @@
 
 ## Docs
 
-This is a [Django](https://www.djangoproject.com/) project. Check out the [django docs](https://docs.djangoproject.com/) for general technical documentation. In addition, there are project-specific [skg.network docs](/docs).
+This is a [Django](https://www.djangoproject.com/) project. Check out the [django docs](https://docs.djangoproject.com/) for general technical documentation.
 
 ## Contributing
 
