@@ -1,3 +1,11 @@
-# from django.contrib import admin
+from django.contrib import admin
 
-# Register your models here.
+from main import models
+
+
+# Candidacy
+class CandidacyAdmin(admin.ModelAdmin):
+    list_display = ("leader", "party", "website", "id")
+
+
+admin.site.register(models.Candidacy, CandidacyAdmin)

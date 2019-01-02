@@ -6,6 +6,4 @@ from . import views
 admin.site.site_header = "skg.network administration"
 app_name = "main"
 
-urlpatterns = [
-    path("", views.index, name="index"),
-]
+urlpatterns = [path("", views.index, name="index")]
