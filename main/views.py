@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+
+from main import models
 
 
 def index(request):
-    return render(request, "main/layout.html")
+    return redirect("main:elections")
+
+
+def elections(request):
+    candidacies = models.Candidacy.objects.all().order_by("id")
+    return render(request, "main/layout.html", {"candidacies": candidacies})
