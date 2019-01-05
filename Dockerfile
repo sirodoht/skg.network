@@ -1,14 +1,19 @@
-FROM python:3.6
+FROM python:3.6.7
 ENV PYTHONUNBUFFERED 1
-RUN apt-get update
-RUN apt-get install -y swig libssl-dev dpkg-dev netcat
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    swig \
+    libssl-dev \
+    dpkg-dev \
+    netcat \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -U pip
-ADD requirements.txt /code/
+COPY requirements.txt /code/
 RUN pip install -Ur /code/requirements.txt
 
-ADD CHECKS /app/
-ADD * /code/
+COPY CHECKS /app/
+COPY * /code/
 
 WORKDIR /code
 COPY . /code/
