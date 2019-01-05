@@ -178,3 +178,59 @@ template {
 [hidden] {
     display: none;
 }
+
+/* main */
+html,
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #131313;
+}
+
+header {
+    background: #e86b4b;
+    border-bottom: 7px solid #d33f4a;
+    text-align: center;
+    padding-top: 2px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: transparent;
+}
+
+table thead th {
+    text-align: left;
+    font-weight: 300;
+    color: #969696;
+    border-bottom: 2px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+table td,
+table th {
+    padding: 12px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
