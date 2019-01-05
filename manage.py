@@ -6,6 +6,7 @@ from pathlib import Path
 import dotenv
 
 if __name__ == "__main__":
+    dotenv.load_dotenv(Path(".") / ".env")
 
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "skgnetwork.settings")
     try:
