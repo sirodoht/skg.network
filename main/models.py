@@ -4,4 +4,7 @@ from django.db import models
 class Candidacy(models.Model):
     leader = models.CharField(max_length=300)
     party = models.CharField(max_length=300)
-    website = models.URLField()
+    website = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.leader
