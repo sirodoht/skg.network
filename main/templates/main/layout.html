@@ -9,11 +9,36 @@
     <meta name="description" content="skg.network municipality elections helper">
     <meta name="author" content="skg.network">
 
-    <title>{% block title %}skg.network{% endblock %}</title>
+    <title>{% block title %}skg.network | Thessaloniki Municipality Elections Candidacies{% endblock %}</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;subset=greek" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
 </head>
 <body>
-    <h1>hi</h1>
+    <header>
+        <h1>Δημοτικές Εκλογές Θεσσαλονίκης 2019</h1>
+    </header>
+    <div class="container">
+        <h2>Υποψηφιότητες</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Αρχηγός</th>
+                    <th scope="col">Παράταξη</th>
+                    <th scope="col">Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in candidacies %}
+                <tr>
+                    <td>{{ c.leader }}</td>
+                    <td>{{ c.party }}</td>
+                    <td><a href="{{ c.website }}">{{ c.website }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
