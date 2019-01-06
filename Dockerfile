@@ -16,4 +16,5 @@ COPY CHECKS /app/
 COPY * /code/
 
 WORKDIR /code
+COPY . /code/
 RUN /code/manage.py collectstatic --noinput
