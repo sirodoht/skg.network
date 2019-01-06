@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Candidacy(models.Model):
     leader = models.CharField(max_length=300)
-    party = models.CharField(max_length=300)
+    party = models.CharField(max_length=300, blank=True, null=True)
     website = models.URLField(blank=True, null=True)
 
     def __str__(self):
