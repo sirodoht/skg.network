@@ -186,6 +186,23 @@ body {
     color: #131313;
 }
 
+a {
+    color: #d33f4a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #800080;
+}
+
+a:active {
+    color: #ff0000;
+}
+
 header {
     background: #e86b4b;
     border-bottom: 7px solid #d33f4a;
