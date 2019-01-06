@@ -33,8 +33,8 @@
                 {% for c in candidacies %}
                 <tr>
                     <td>{{ c.leader }}</td>
-                    <td>{{ c.party }}</td>
-                    <td><a href="{{ c.website }}">{{ c.website }}</a></td>
+                    <td>{{ c.party|default:"" }}</td>
+                    <td><a href="{{ c.website }}">{{ c.website|default:"" }}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
